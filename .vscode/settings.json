@@ -18,5 +18,9 @@
         "titleBar.inactiveBackground": "#970d4b99",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.remoteColor": "#970d4b"
+    "peacock.remoteColor": "#970d4b",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.indentSize": 2
+    },
 }

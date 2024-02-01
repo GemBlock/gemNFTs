@@ -12,6 +12,8 @@
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
+    "prettier": "^3.2.4",
     "typescript": "^5.3.3"
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
