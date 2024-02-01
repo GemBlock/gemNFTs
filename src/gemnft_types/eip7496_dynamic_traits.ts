@@ -60,8 +60,8 @@ interface Traits {
   [key: string]: TraitProperty;
 }
 
-interface MetadataSchema {
+interface EIP7496MetadataSchema {
   traits: Traits;
 }
 
-export { MetadataSchema, Traits, TraitProperty, TraitDataType, ValidateOnSale, DataType };
+export { EIP7496MetadataSchema, Traits, TraitProperty, TraitDataType, ValidateOnSale, DataType };
