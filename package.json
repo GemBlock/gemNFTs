@@ -1,0 +1,20 @@
+{
+  "name": "gemblock-gemnft-assets",
+  "version": "0.1.0-alpha",
+  "description": "metadata and asset hosting for testnet GEMBlock gemNFTs",
+  "main": "src/main.ts",
+  "repository": "git@github.com:GemBlock/gemNFTs.git",
+  "author": "Liam C. - chaintail.xyz",
+  "scripts": {
+    "start": "node src/main.ts",
+    "build": "tsc",
+    "gh-pages": "git add ./www && git commit --allow-empty -m 'deploy www to gh-pages' && git subtree push --prefix www origin HEAD:gh-pages --force"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "yarn@4.1.0"
+}
