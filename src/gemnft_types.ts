@@ -11,11 +11,11 @@ import {
   GemColour,
   Hue,
   Tone,
-  Intensity,
+  Saturation,
   Grade,
   hueDetails,
   toneDetails,
-  intensityDetails,
+  saturationDetails,
   gradeDetails,
   HueGIAAbreviation,
   GradeRank,
@@ -32,6 +32,11 @@ interface GemstoneDetails
     GemClarity,
     GemAppraisal,
     GemVaultAudit {
+  //
+
+  // GEMBlock Gemstone ID (should match the token ID)
+  id: number;
+
   // Type of Gemstone
   kind: Kind;
 
@@ -56,15 +61,15 @@ interface GemstoneDetails
   polish: "Excellent" | "Very Good" | "Good" | "Fair" | "Poor";
   symmetry: "Excellent" | "Very Good" | "Good" | "Fair" | "Poor";
 
-  // GemColour - Colour Grading, Hue, Tone, and Intensity
+  // GemColour - Colour Grading, Hue, Tone, and Saturation
   grade: Grade;
   hue: Hue;
   tone: Tone;
-  intensity: Intensity;
+  saturation: Saturation;
   gradeRank: GradeRank;
   hueDescription: HueDescription;
   toneDescription: ToneName;
-  intensityDescription: SaturationName;
+  saturationDescription: SaturationName;
 
   // GemClarity - Clarity Grading
   clarity: Clarity;
@@ -104,77 +109,80 @@ interface GemstoneDetails
   };
 }
 
-enum OpenSeaAttributeDisplayType {
-  "number" = "number",
-  "boost_percentage" = "boost_percentage",
-  "boost_number" = "boost_number",
-  "boost_currency" = "boost_currency",
-  "date" = "date",
-  "url" = "url",
-  "image" = "image",
-  "markdown" = "markdown",
-  "address" = "address",
-  "static" = "static",
-  "hidden" = "hidden",
-}
-interface OpenSeaAttribute {
-  trait_type: string;
-  max_value?: string;
-  display_type: ;
-  include_in_traits?: boolean;
-}
+// enum OpenSeaAttributeDisplayType {
+//   NUMBER = "number",
+//   BOOST_PERCENTAGE = "boost_percentage",
+//   BOOST_NUMBER = "boost_number",
+//   DATE = "date",
+//   "boost_percentage" = "boost_percentage",
+//   "boost_number" = "boost_number",
+//   "boost_currency" = "boost_currency",
+//   "date" = "date",
+//   "url" = "url",
+//   "image" = "image",
+//   "markdown" = "markdown",
+//   "address" = "address",
+//   "static" = "static",
+//   "hidden" = "hidden",
+// }
+// interface OpenSeaAttribute {
+//   trait_type: string;
+//   max_value?: string;
+//   display_type: ;
+//   include_in_traits?: boolean;
+// }
 
-interface GemstoneNFT {
-  tokenId: number;
-  name: string;
-  description: string;
-  external_url: string;
-  image: string;
-  animation_url: string;
-  characteristics: GemstoneDetails;
-}
+// interface GemstoneNFT {
+//   tokenId: number;
+//   name: string;
+//   description: string;
+//   external_url: string;
+//   image: string;
+//   animation_url: string;
+//   characteristics: GemstoneDetails;
+// }
 
-const baseURL = "https://gemblock.co/gemstone";
+// const baseURL = "https://gemblock.co/gemstone";
 
-for (let id = 1; id <= 100; id++) {
-  const paddedTokenId = String(id).padStart(4, "0");
-  console.log("Creating Gemstone NFT: ", paddedTokenId);
+// for (let id = 1; id <= 100; id++) {
+//   const paddedTokenId = String(id).padStart(4, "0");
+//   console.log("Creating Gemstone NFT: ", paddedTokenId);
 
-  const kind: GemstoneKind =
-    Object.values(GemstoneKinds)[id % Object.values(GemstoneKinds).length];
-  const name = `${kind} #${paddedTokenId}`;
+//   const kind: GemstoneKind =
+//     Object.values(GemstoneKinds)[id % Object.values(GemstoneKinds).length];
+//   const name = `${kind} #${paddedTokenId}`;
 
-  const external_url = `${baseURL}/${id}`;
-  const image = `${baseURL}/${id}/image.png`;
-  const description = `A stunningly beautiful ${kind} with excellent cut and clarity, appraised by a certified gemologist.`;
+//   const external_url = `${baseURL}/${id}`;
+//   const image = `${baseURL}/${id}/image.png`;
+//   const description = `A stunningly beautiful ${kind} with excellent cut and clarity, appraised by a certified gemologist.`;
 
-  let gemstoneNFT: GemstoneNFT = {
-    tokenId: id,
-    name: `Gemstone #${id}`,
-    description: `A beautiful gemstone with a grade of AAA and a hue of ${
-      HueDescriptions[Hue.R]
-    }.`,
-    external_url: `https://gemstone.com/gemstone/${id}`,
-    image: `https://gemstone.com/images/gemstone-${id}.png`,
-    animation_url: `https://gemstone.com/animations/gemstone-${id}.mp4`,
-    characteristics: {
-      grade: Grade.AAA,
-      gradeRank: GradeRank.AAA,
-      hue: Hue.R,
-      hueDescription: HueDescriptions[Hue.R],
-      tone: 5,
-      toneDescription: ToneDescriptions[5],
-      intensity: 6,
-      intensityDescription: SaturationDescriptionsWarm[6],
-    },
-  };
-}
+//   let gemstoneNFT: GemstoneNFT = {
+//     tokenId: id,
+//     name: `Gemstone #${id}`,
+//     description: `A beautiful gemstone with a grade of AAA and a hue of ${
+//       HueDescriptions[Hue.R]
+//     }.`,
+//     external_url: `https://gemstone.com/gemstone/${id}`,
+//     image: `https://gemstone.com/images/gemstone-${id}.png`,
+//     animation_url: `https://gemstone.com/animations/gemstone-${id}.mp4`,
+//     characteristics: {
+//       grade: Grade.AAA,
+//       gradeRank: GradeRank.AAA,
+//       hue: Hue.R,
+//       hueDescription: HueDescriptions[Hue.R],
+//       tone: 5,
+//       toneDescription: ToneDescriptions[5],
+//       intensity: 6,
+//       intensityDescription: SaturationDescriptionsWarm[6],
+//     },
+//   };
+// }
 
-export {
-  GemstoneColour,
-  Grade,
-  Hue,
-  Tones as Tone,
-  Saturation as Intensity,
-  HueType,
-};
+// export {
+//   GemstoneColour,
+//   Grade,
+//   Hue,
+//   Tones as Tone,
+//   Saturation as Saturation,
+//   HueType,
+// };
