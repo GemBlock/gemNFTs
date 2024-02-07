@@ -6,7 +6,7 @@
   "repository": "git@github.com:GemBlock/gemNFTs.git",
   "author": "Liam C. - chaintail.xyz",
   "scripts": {
-    "start": "node main.ts",
+    "start": "node src/main.ts",
     "build": "tsc"
   },
   "license": "UNLICENSED",

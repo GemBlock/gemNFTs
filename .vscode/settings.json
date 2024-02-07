@@ -21,6 +21,13 @@
     "peacock.remoteColor": "#970d4b",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.indentSize": 2
+        "editor.indentSize": 4
     },
+    "[html]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "prettier.bracketSameLine": true,
+    "livePreview.serverRoot": "www"
+    
 }
