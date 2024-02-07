@@ -1,1 +1,1 @@
-# gemNFTs
+This www folder represents the `gh-pages` branch, using `git worktree` to mount the branch as the folder.
