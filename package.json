@@ -7,7 +7,8 @@
   "author": "Liam C. - chaintail.xyz",
   "scripts": {
     "start": "node src/main.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "gh-pages": "git add ./www && git commit -m 'deploy www to gh-pages' && git subtree push --prefix www origin gh-pages"
   },
   "license": "UNLICENSED",
   "private": true,
