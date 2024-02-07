@@ -1,1 +1,1 @@
-This www folder represents the `gh-pages` branch, using `git worktree` to mount the branch as the folder.
+This `docs` folder is the root of the `gemnfts.gemblock.co` website.
