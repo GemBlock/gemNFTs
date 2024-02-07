@@ -1,0 +1,13 @@
+{
+  "traits": {
+    "price": {
+      "displayName": "Price",
+      "dataType": {
+        "type": "decimal",
+        "signed": false,
+        "decimals": 0,
+        "minValue": 0
+      }
+    }
+  }
+}
