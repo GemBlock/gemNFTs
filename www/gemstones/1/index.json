@@ -1,0 +1,36 @@
+{
+  "name": "Emeral #0001 - Test Gemstone",
+  "description": "A test gemstone for the purpose of testing the metadata debugger.",
+  "external_url": "https://gemnfts.gemblock.co/gemstones/1",
+  "group_key": "emerald",
+  "keywords": ["test", "gemstone", "emerald"],
+  "fallback_image": "https://gemnfts.gemblock.co/gemstones/default/emerald.png",
+  "media": [
+    {
+      "uri": "https://gemnfts.gemblock.co/gemstones/1/gemstone.png",
+      "type": "image/png",
+      "alt": "Image of GEMBlock Emerald #0001"
+    }
+  ],
+  "meta": {
+    "version": 1
+  },
+  "attributes": [
+    {
+      "trait_type": "Color",
+      "value": "Green"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Cut",
+      "value": "Round"
+    },
+    {
+      "trait_type": "Carat",
+      "value": "1.0"
+    }
+  ]
+}
