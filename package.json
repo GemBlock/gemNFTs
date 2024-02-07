@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node src/main.ts",
     "build": "tsc",
-    "gh-pages": "git add ./www && git commit -m 'deploy www to gh-pages' && git subtree push --prefix www origin gh-pages"
+    "gh-pages": "git add ./www && git commit --allow-empty -m 'deploy www to gh-pages' && git subtree push --prefix www origin gh-pages"
   },
   "license": "UNLICENSED",
   "private": true,
